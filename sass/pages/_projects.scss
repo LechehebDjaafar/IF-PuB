@@ -1,0 +1,149 @@
+.projects {
+  .container {
+    @include Extra-Small {
+      width: auto;
+      padding-inline: 8px;
+    }
+    @include Small {
+      width: auto;
+      padding-inline: 35px;
+    }
+    @include Medium {
+      width: auto;
+      padding-inline: 5px;
+    }
+    @include Large {
+      width: auto;
+      padding-inline: 30px;
+    }
+  }
+  .projects__grid {
+    margin-top: 75px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content;
+    gap: 5px;
+    @include Extra-Small {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @include Small {
+      grid-template-columns: auto;
+      gap: 15px;
+    }
+    .project {
+      position: relative;
+      background-size: cover;
+      background-position: center center;
+      overflow: hidden;
+      &__overlay {
+        position: absolute;
+        top: -120%;
+        left: 0;
+        background-color: rgba($color: #112e41, $alpha: 0.7);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 50px;
+        transition: 250ms ease-in-out;
+        @include Mobile {
+          padding-inline: 20px !important;
+        }
+        @include Extra-Small {
+          padding-inline: 20px;
+        }
+        h4 {
+          color: #fff;
+          font-family: $Roboto;
+          font-size: 42px;
+          font-weight: 700;
+          letter-spacing: 2.5px;
+          text-transform: uppercase;
+          text-align: center;
+          line-height: normal;
+          @include Mobile {
+            font-size: 28px !important;
+          }
+          @include Extra-Small {
+            font-size: 34px;
+          }
+        }
+      }
+      &:hover .project__overlay {
+        top: 0;
+      }
+      &:first-of-type {
+        background-image: url(../img/projects/projectOne.png);
+        height: 490px;
+        @include Mobile {
+          height: 250px !important;
+        }
+        @include Extra-Small {
+          height: 350px;
+        }
+      }
+      &:last-of-type {
+        background-image: url(../img/projects/projectSix.png);
+        height: 730px;
+        margin-top: -255px;
+        @include Mobile {
+          height: 420px !important;
+        }
+        @include Extra-Small {
+          margin-top: 0;
+          height: 520px;
+        }
+        @include Small {
+          margin-top: 0;
+        }
+      }
+      &:nth-of-type(2) {
+        background-image: url(../img/projects/projectTwo.png);
+        height: 720px;
+        @include Mobile {
+          height: 420px !important;
+        }
+        @include Extra-Small {
+          height: 450px;
+        }
+      }
+      &:nth-of-type(3) {
+        background-image: url(../img/projects/projectThree.png);
+        height: 700px;
+        margin-top: -230px;
+        @include Mobile {
+          height: 360px !important;
+        }
+        @include Extra-Small {
+          margin-top: 0;
+          height: 475px;
+        }
+        @include Small {
+          margin-top: 0;
+        }
+      }
+      &:nth-of-type(4) {
+        background-image: url(../img/projects/projectFour.png);
+        height: 215px;
+        @include Mobile {
+          height: 150px !important;
+        }
+        @include Extra-Small {
+          height: 160px;
+        }
+      }
+      &:nth-of-type(5) {
+        background-image: url(../img/projects/projectFive.png);
+        height: 475px;
+        @include Mobile {
+          height: 275px !important;
+        }
+        @include Extra-Small {
+          height: 345px;
+        }
+      }
+    }
+  }
+}

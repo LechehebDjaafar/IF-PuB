@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  color: $bodyColor;
+}
+
+ul {
+  padding-left: unset;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section {
+  padding-block: 8rem;
+  @include Mobile {
+    padding-block: 4rem;
+  }
+}
+
+.sm-title {
+  color: $redColor;
+  font-family: $Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-block: 0;
+  @include Extra-Small {
+    font-size: 16px;
+  }
+  @include Small {
+    font-size: 16px;
+  }
+  @include Medium {
+    font-size: 18px;
+  }
+}
+.title {
+  text-align: center;
+  font-family: $Oswald;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.73px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  @include Mobile {
+    font-size: 28px !important;
+  }
+  @include Extra-Small {
+    font-size: 32px;
+  }
+  @include Small {
+    font-size: 32px;
+  }
+  @include Medium {
+    font-size: 35px;
+  }
+}

@@ -1,0 +1,110 @@
+.works {
+  background-image: url(../img/works/works_img.png);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  @include Small {
+    background-position: center center;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(29, 99, 173, 0.75);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+  }
+  &__content {
+    position: relative;
+    z-index: 3;
+  }
+  &_sm-title,
+  &__title {
+    color: white;
+  }
+  &__flex {
+    display: flex;
+    gap: 65px;
+    margin-top: 75px;
+    @include Mobile {
+      gap: 25px;
+      margin-top: 35px;
+    }
+    @include Extra-Small {
+      flex-direction: column;
+      align-items: center;
+      gap: 35px;
+    }
+    @include Small {
+      flex-direction: column;
+      align-items: center;
+      gap: 45px;
+    }
+    @include Medium {
+      gap: 45px;
+      display: grid;
+      grid-template-columns: repeat(2, 266px);
+      justify-content: center;
+    }
+    @include Large {
+      gap: 45px;
+      display: grid;
+      grid-template-columns: repeat(2, 266px);
+      justify-content: center;
+    }
+    @include X-Large {
+      gap: 25px;
+    }
+    .work {
+      background-color: white;
+      width: 266px;
+      height: 266px;
+      padding: 35px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      &__img {
+        transition: 150ms linear;
+        fill: #112e41;
+      }
+      &__title {
+        text-align: center;
+        font-family: $Roboto;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 1.625px;
+        text-transform: uppercase;
+        margin-top: 20px;
+        margin-bottom: 0;
+        transition: 150ms linear;
+      }
+      &:first-of-type:hover .work__title {
+        color: $colorIconOne;
+      }
+      &:first-of-type:hover .work__img {
+        fill: $colorIconOne;
+      }
+      &:nth-of-type(2):hover .work__title {
+        color: $colorIconTwo;
+      }
+      &:nth-of-type(2):hover .work__img {
+        fill: $colorIconTwo;
+      }
+      &:nth-of-type(3):hover .work__title {
+        color: $colorIconThree;
+      }
+      &:nth-of-type(3):hover .work__img {
+        fill: $colorIconThree;
+      }
+      &:last-of-type:hover .work__title {
+        color: $colorIconFour;
+      }
+      &:last-of-type:hover .work__img {
+        fill: $colorIconFour;
+      }
+    }
+  }
+}

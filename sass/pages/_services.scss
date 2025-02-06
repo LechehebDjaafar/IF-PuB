@@ -1,0 +1,137 @@
+.services {
+  background-color: $sectionColor;
+  overflow: hidden;
+  .container {
+    position: relative;
+    &::before,
+    &::after {
+      position: absolute;
+      top: 10%;
+    }
+    &::before {
+      content: url(../svg/services/Vector_left.svg);
+      left: -35%;
+      top: 10%;
+      @include Small {
+        top: 15%;
+      }
+    }
+    &::after {
+      content: url(../svg/services/Vector_right.svg);
+      right: -30%;
+      top: 30%;
+      @include Extra-Small {
+        top: 65%;
+      }
+      @include Small {
+        top: 65%;
+      }
+      @include Medium {
+        top: 75%;
+      }
+      @include Large {
+        top: 60%;
+      }
+    }
+  }
+  &__title {
+    position: relative;
+  }
+  &__flex {
+    display: flex;
+    column-gap: 50px;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    @include Extra-Small {
+      flex-direction: column;
+      gap: 50px;
+      align-items: center;
+    }
+    @include Small {
+      flex-direction: column;
+      gap: 50px;
+      align-items: center;
+    }
+    @include Medium {
+      flex-direction: column;
+      gap: 50px;
+      align-items: center;
+    }
+    @include Large {
+      display: grid;
+      grid-template-columns: repeat(2, 350px);
+      justify-content: center;
+      gap: 50px;
+    }
+    @include X-Large {
+      column-gap: 15px;
+    }
+    .service {
+      padding: 70px 20px 50px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0px 5px 35px 0px rgba(166, 209, 237, 0.25);
+      position: relative;
+      @include Mobile {
+        width: 325px !important;
+      }
+      @include Extra-Small {
+        width: 366px;
+      }
+      @include Small {
+        width: 366px;
+      }
+      @include Medium {
+        width: 366px;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: 200ms ease-in-out;
+        z-index: -80;
+      }
+      &:hover::after {
+        transform: rotate(6deg);
+      }
+      &:nth-of-type(1)::after {
+        background-color: $colorIconOne;
+      }
+      &:nth-of-type(2)::after {
+        background-color: $colorIconTwo;
+      }
+      &:nth-of-type(3)::after {
+        background-color: $colorIconThree;
+      }
+      &:nth-of-type(4)::after {
+        background-color: $colorIconFour;
+      }
+      .service__img {
+        display: block;
+        margin-inline: auto;
+      }
+      .service__title {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 0.33px;
+        text-transform: uppercase;
+        font-family: $Monda;
+        text-align: center;
+        margin-block: 25px 20px;
+      }
+      .service__paragraph {
+        text-align: center;
+        font-family: $OpenSans;
+        font-size: 18px;
+        letter-spacing: 0.27px;
+        line-height: 1.4;
+      }
+    }
+  }
+}

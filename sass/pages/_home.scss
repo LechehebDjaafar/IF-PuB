@@ -1,0 +1,296 @@
+.header {
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: $navHeight;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgba(166, 209, 237, 0.8);
+  @include Mobile {
+    height: 80px;
+  }
+  @include Extra-Small {
+    height: 100px;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 380px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    @include Extra-Small {
+      gap: initial;
+      justify-content: space-between;
+    }
+    @include Medium {
+      justify-content: space-between;
+    }
+    &__logo {
+      width: 110px;
+      @include Mobile {
+        height: 60px;
+      }
+      @include Extra-Small {
+        width: 75px;
+      }
+      @include Small {
+        width: 100px;
+      }
+      @include Medium {
+        width: 100px;
+      }
+      @include Large {
+        width: 80px;
+      }
+    }
+    &__links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      @include Extra-Small {
+        display: none;
+      }
+      @include Small {
+        display: none;
+      }
+      @include Medium {
+        display: none;
+      }
+    }
+    &__link {
+      font-family: $Roboto;
+      font-size: 1.25rem; // 20px
+      text-transform: uppercase;
+      font-weight: 500;
+      @include Large {
+        font-size: 18px;
+      }
+      position: relative;
+      &:hover::after {
+        width: 65%;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 0;
+        height: 4px;
+        border-radius: 10px;
+        background-color: $blueColor;
+        transition: 150ms ease-in-out;
+      }
+    }
+    &__btn {
+      width: 40px;
+      cursor: pointer;
+      display: none;
+      @include Mobile {
+        width: 30px;
+      }
+      @include Extra-Small {
+        display: block;
+        width: 35px;
+      }
+      @include Small {
+        display: block;
+      }
+      @include Medium {
+        display: block;
+      }
+      @include Large {
+        display: none;
+      }
+      @include X-Large {
+        display: none;
+      }
+    }
+  }
+}
+
+.home {
+  height: 100vh;
+  padding-top: $navHeight;
+  position: relative;
+  overflow: hidden;
+  @include Mobile {
+    padding-top: 80px;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    width: 585px;
+    height: 214px;
+    @include Extra-Small {
+      width: 300px;
+      height: auto;
+    }
+    @include Small {
+      width: 350px;
+      height: auto;
+    }
+    @include Medium {
+      width: 350px;
+      height: auto;
+    }
+    @include Large {
+      width: 500px;
+      height: auto;
+    }
+  }
+  &::before {
+    content: url("../svg/home/red_triangle.svg");
+    right: 10%;
+    filter: drop-shadow(-12px 4px 50px rgba(0, 0, 0, 0.25));
+    @include Extra-Small {
+      right: 0;
+    }
+    @include Small {
+      right: 0;
+    }
+  }
+  &::after {
+    content: url("../svg/home/blue_triangle.svg");
+    bottom: -5px;
+    left: 10%;
+    filter: drop-shadow(12px 4px 50px rgba(0, 0, 0, 0.25));
+    @include Extra-Small {
+      left: 0;
+    }
+    @include Small {
+      left: 0;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    font-family: $Poppins;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 5.2px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin-left: 75px;
+    top: 50%;
+    left: 50%;
+    @include Mobile {
+      font-size: 38px !important;
+    }
+    @include Extra-Small {
+      width: inherit;
+      font-size: 48px;
+      // margin-left: 25px;
+    }
+    @include Small {
+      width: inherit;
+      font-size: 63px;
+    }
+    @include Medium {
+      font-size: 80px;
+      width: inherit;
+      margin-left: 147px;
+    }
+    @include Large {
+      font-size: 3.9rem;
+    }
+    @include X-Large {
+      font-size: 4.4rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10.507px;
+      height: 100%;
+      background-color: $blueColor;
+      left: -75px;
+      bottom: 0;
+      @include Extra-Small {
+        left: -50px;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 11.558px;
+      height: 35%;
+      background-color: $redColor;
+      left: -65px;
+      bottom: 0;
+      @include Extra-Small {
+        left: -40px;
+      }
+    }
+  }
+}
+
+.circle {
+  position: absolute;
+  &_1 {
+    left: 50%;
+    top: 180px;
+    animation: circleAnimation1 6s ease-in-out infinite both alternate-reverse;
+  }
+  &_2 {
+    left: 8%;
+    top: 180px;
+    animation: circleAnimation2 3s ease-in-out infinite both alternate-reverse;
+  }
+  &_3 {
+    left: 55%;
+    top: 780px;
+    animation: circleAnimation3 8s ease-in-out infinite both alternate;
+  }
+  &_4 {
+    right: 12%;
+    top: 580px;
+    animation: circleAnimation4 5s ease-in-out infinite both alternate;
+  }
+  &_5 {
+    left: 12%;
+    top: 750px;
+    animation: circleAnimation5 5s ease-in-out infinite both alternate;
+  }
+  &_6 {
+    top: 350px;
+    left: 22%;
+    animation: circleAnimation6 4s ease-in-out infinite both alternate;
+  }
+}
+
+@keyframes circleAnimation1 {
+  100% {
+    left: 40%;
+  }
+}
+@keyframes circleAnimation2 {
+  100% {
+    left: 12%;
+    top: 280px;
+  }
+}
+@keyframes circleAnimation3 {
+  100% {
+    left: 68%;
+    top: 680px;
+  }
+}
+@keyframes circleAnimation4 {
+  100% {
+    right: 10%;
+    top: 380px;
+  }
+}
+@keyframes circleAnimation5 {
+  100% {
+    left: 8%;
+    top: 850px;
+  }
+}
+@keyframes circleAnimation6 {
+  100% {
+    top: 550px;
+  }
+}

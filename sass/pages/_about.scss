@@ -1,0 +1,180 @@
+.about {
+  position: relative;
+  .container {
+    @media (min-width: 1400px) {
+      width: 1370px;
+    }
+  }
+  &__flex {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    @include Extra-Small {
+      flex-direction: column;
+    }
+    @include Small {
+      flex-direction: column;
+    }
+    @include Medium {
+      flex-direction: column;
+      margin-top: 60px;
+    }
+    @include Large {
+      flex-direction: column;
+      margin-top: 65px;
+    }
+    .about__img {
+      @include Extra-Small {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+      }
+      @include Small {
+        width: 100%;
+      }
+      @include Medium {
+        width: 100%;
+      }
+      @include X-Large {
+        width: 620px;
+      }
+    }
+    .about__content {
+      margin-top: 65px;
+      @include Extra-Small {
+        text-align: center;
+      }
+      @include Small {
+        text-align: center;
+      }
+      @include Medium {
+        text-align: center;
+        margin-top: 50px;
+      }
+      @include Large {
+        margin-top: 45px;
+        text-align: center;
+      }
+      &-sm_title {
+        text-align: initial;
+        @include Extra-Small {
+          text-align: center;
+        }
+        @include Small {
+          text-align: center;
+        }
+        @include Medium {
+          text-align: center;
+        }
+        @include Large {
+          text-align: center;
+        }
+        @include X-Large {
+          font-size: 18px;
+        }
+      }
+      &-title {
+        text-align: initial;
+        font-size: 2.1875rem; //35px
+        letter-spacing: 2.275px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+        @include Extra-Small {
+          text-align: center;
+        }
+        @include Small {
+          text-align: center;
+        }
+        @include Medium {
+          text-align: center;
+        }
+        @include Large {
+          text-align: center;
+        }
+        @include X-Large {
+          font-size: 29px;
+        }
+        & + p {
+          font-family: $Oswald;
+          font-size: 1, 625rem; //26px
+          line-height: 30px; /* 138.462% */
+          letter-spacing: 1.69px;
+          text-transform: uppercase;
+          margin-bottom: 20px;
+          & + p {
+            font-family: $Roboto;
+            font-size: 1.25rem; //20px
+            line-height: 30px; /* 175% */
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            @include X-Large {
+              font-size: 18px;
+            }
+          }
+        }
+        &:last-of-type {
+          letter-spacing: 1.225px;
+          font-weight: 600;
+          margin-top: 40px;
+        }
+      }
+      .about__btn {
+        font-family: $Roboto;
+        font-size: 18px;
+        letter-spacing: 0.27px;
+        border-radius: 25px;
+        background: $redColor;
+        box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 15px 35px;
+        text-transform: uppercase;
+        width: 250px;
+        position: relative;
+        transition: 150ms linear;
+        @include Mobile {
+          padding: 12px 35px;
+          font-size: 16px;
+        }
+        @include Extra-Small {
+          margin-inline: auto;
+        }
+        @include Small {
+          margin-inline: auto;
+        }
+        @include Medium {
+          margin-inline: auto;
+        }
+        @include Large {
+          margin-inline: auto;
+        }
+        @include X-Large {
+          width: fit-content;
+          padding-inline: 30px;
+        }
+        &:hover {
+          background-color: $blueColor;
+        }
+      }
+    }
+  }
+  
+  .circle_1 {
+    left: 80%;
+    top: 300px;
+    @include Extra-Small {
+      display: none;
+    }
+  }
+  
+  .circle_5 {
+    left: 3%;
+    @include Extra-Small {
+      
+    }
+  }
+}
