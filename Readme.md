@@ -1,6 +1,6 @@
 # If-PuB - Advertising Service Website
 
-![If-PuB Banner](images/banner.png)
+![If-PuB Banner](img/img1.png)
 
 ## 🌟 About If-PuB
 If-PuB is a professional advertising service website designed to connect businesses with their target audience. Built using modern web technologies, If-PuB provides an intuitive and user-friendly platform for promoting products and services effectively.
@@ -19,10 +19,12 @@ If-PuB is a professional advertising service website designed to connect busines
 
 ## 📸 Screenshots
 ### Homepage
-![Homepage Screenshot](images/homepage.png)
+![Homepage Screenshot](img/img2.png)
 
 ### Advertisements Section
-![Ads Section](images/ads.png)
+![Ads Section](img/img3.png)
+### Advertisements Section
+![Ads Section](img/img4.png)
 
 ## 📂 Installation & Setup
 1. Clone the repository:
@@ -39,11 +41,11 @@ If-PuB is a professional advertising service website designed to connect busines
    ```
 
 ## 🌍 Live Demo
-Check out the live version here: [If-PuB Live](https://LechehebDjaafar.github.io/if-pub/)
+Check out the live version here: [If-PuB Live](https://lechehebdjaafar.github.io/IF-PuB/)
 
 ## 📬 Contact
 For any inquiries, feel free to reach out:
-- **Email:** your-email@example.com
+- **Linkdin:** [Lecheheb Djaafar](https://www.linkedin.com/in/lecheheb-djaafar-226594348/)
 - **Instagram:** [@ddos_attack_co](https://www.instagram.com/ddos_attack_co)
 
 ---
